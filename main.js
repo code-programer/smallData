@@ -1,3 +1,4 @@
+//requires db.js
 var data = {}
 function onload(e){
   for(b in e){
