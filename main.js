@@ -1,5 +1,6 @@
 //requires db.js
 function loadtotaldata(){
+  totaldatata.lenght = 0;
   for(base in data){
     var database = data[base].data;
     for(el in database){
