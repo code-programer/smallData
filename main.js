@@ -27,8 +27,10 @@ function search(e){
   loadtotaldata()
   var returner = []
   for(num in totaldata){
-    if(totaldata[num].text.includes(e) ){
-      returner.push(totaldata[num].anserwers)
+    if(!totaldata[num].text === undefined){
+      if(totaldata[num].text.includes(e) ){
+         returner.push(totaldata[num].anserwers)
+      }
     }
   }
   return returner;
