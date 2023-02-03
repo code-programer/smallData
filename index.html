@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>SmallData - A Project By Code-Programer</title>
+    <script src="main.js"></script>
+    <script src="https://raw.githubusercontent.com/code-programer/db.js/main/main.js"></script>
+  </head>
+  <body>
+    <input id="in" type="text" placeholder="type here...">
+    <div id="res"></div>
+  </body>
+  <script>
+    function dod(){
+     var val = document.getElementById("in").value;
+     var result = search(val);
+      for(el in result){
+        document.getElementById("res").innerHTML = document.getElementById("res").innerHTML + "<div class='element'>" + result[el] + "</div>";
+      }
+    }
+    function onkeyo(e){
+      if(e.keyCode == 13){
+        dod()
+      }
+    }
+    window.onload = function(){
+      document.getElementById("in").addEventListener("keyup", onkeyo)
+    }
+  </script>
+</html>
