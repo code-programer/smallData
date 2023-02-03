@@ -26,9 +26,9 @@ db.get("doload")
 function search(e){
   loadtotaldata()
   var returner = []
-  for(el in totaldata){
-    if(totaldata[el].text.includes(e)){
-      returner.push(totaldata[el].anserwers)
+  for(num in totaldata){
+    if(totaldata[num].text.includes(e) ){
+      returner.push(totaldata[num].anserwers)
     }
   }
   return returner;
