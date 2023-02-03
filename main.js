@@ -5,7 +5,7 @@ res.get()
 function loadtotaldata(){
   totaldata.lenght = 0;
   for(base in data){
-    var database = data[base].data;
+    var database = data[base].data.db;
     for(el in database){
       totaldata.push(database[el])
     }
@@ -16,7 +16,7 @@ var totaldata = []
 function doload(e){
   console.log(e)
   for(b in e){
-    data.push(new DB(e.db[b].id, "$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS"))
+    data.push(new DB(e[b].id, "$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS"))
     data[b].get()
   }
   loadtotaldata()
