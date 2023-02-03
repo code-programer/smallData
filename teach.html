@@ -51,6 +51,13 @@
       var url = document.getElementById("url").value;
       var text = document.getElementById("text").value;
       var ans = document.getElementById("ans").value;
+	if(res.data.url.includes(url)){
+		alert("site already included")
+	}
+	else{
+		res.data.url.push(url)
+		res.uptade("url",res.data.url)
+	}
     }
   </script>
 </html>
