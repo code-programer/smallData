@@ -1,4 +1,12 @@
 //requires db.js
+function loadtotaldata(){
+  for(base in data){
+    var database = data[base].data;
+    for(el in database){
+      totaldata.push(database[el])
+    }
+  }
+}
 var data = []
 var totaldata = []
 function doload(e){
@@ -9,14 +17,6 @@ function doload(e){
     data[b].get()
   }
   loadtotaldata()
-}
-function loadtotaldata(){
-  for(base in data){
-    var database = data[base].data;
-    for(el in database){
-      totaldata.push(database[el])
-    }
-  }
 }
 var db = new DB("63db7034ace6f33a22d38abd","$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS");
 db.get("doload")
