@@ -16,8 +16,7 @@ var totaldata = []
 function doload(e){
   console.log(e)
   for(b in e){
-    console.log(e[b])
-    data.push(new DB(e[b].id, "$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS"))
+    data.push(new DB(e.db[b].id, "$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS"))
     data[b].get()
   }
   loadtotaldata()
