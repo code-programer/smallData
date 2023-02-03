@@ -3,7 +3,7 @@ var res = new DB("63dd1bd5c0e7653a056e33c4","$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine
 res.get()
 
 function loadtotaldata(){
-  totaldatata.lenght = 0;
+  totaldata.lenght = 0;
   for(base in data){
     var database = data[base].data;
     for(el in database){
