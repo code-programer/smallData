@@ -1,4 +1,7 @@
 //requires db.js
+var res = new DB("63dd1bd5c0e7653a056e33c4","$2b$10$GQBXgX0qtSt9SMrLTUYkle8r3ine3QESBb8jK69jddclQRRmMufvS");
+res.get()
+
 function loadtotaldata(){
   totaldatata.lenght = 0;
   for(base in data){
