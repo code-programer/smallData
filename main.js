@@ -26,12 +26,17 @@ db.get("doload")
 function search(e){
   loadtotaldata()
   var returner = []
+  var returnnum = []
   for(num in totaldata){
     if(!totaldata[num].text === undefined){
       if(totaldata[num].text.includes(e) ){
+        if(returner.includes(totaldata[num].anserwers)){returnnum[returner.indexOf(totaldata[num].anserwers)] += 1}
+        else{
          returner.push(totaldata[num].anserwers)
+          returnnum.push(1)
+        }
       }
     }
   }
-  return returner;
+  return returner[returnnum.indexOf(Math.max(...returnnum))]
 }
